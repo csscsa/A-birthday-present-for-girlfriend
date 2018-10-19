@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no"/>
+<title>反馈表</title>
+
+<link rel="stylesheet" type="text/css" href="__STATIC__/fankui2/css/demo.css">
+<link rel="stylesheet" type="text/css" href="__STATIC__/fankui2/css/style.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/fankui2/css/basictable.css" />
+
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="__STATIC__/index/css/materialize.css">
+	<link rel="stylesheet" href="__STATIC__/index/css/loaders.css">
+	<link rel="stylesheet" href="__STATIC__/index/css/line-awesome.css">
+	<link rel="stylesheet" href="__STATIC__/index/css/line-awesome-font-awesome.css">
+	<link rel="stylesheet" href="__STATIC__/index/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="__STATIC__/index/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="__STATIC__/index/css/style.css">
+</head>
+<body>
+	 {include file='public/lan' /}
+<div class="container">
+	<div id="page">
+	  <h1>意见反馈</h1>
+	  
+
+	  <p>已反馈建议</p>
+	  
+	  
+	  <table id="table">
+		<thead>
+		  <tr>
+            <th>用户名</th>
+			<th>反馈意见</th>
+			
+
+		  </tr>
+		</thead>
+<tbody>
+<?php 
+
+foreach($all as $key =>$v){ ?>
+
+		
+		  <tr>
+			<td>
+			<?php echo $v; ?>
+		    </td>
+		    <td>
+			<?php echo $key; ?>
+		    </td>
+		  </tr>
+
+
+
+
+
+          <?php } ?>
+</tbody>
+
+
+
+
+
+
+	  </table>
+
+
+	  
+
+
+
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.basictable.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	  $('#table').basictable();
+
+	  $('#table-breakpoint').basictable({
+		breakpoint: 768
+	  });
+
+	  $('#table-swap-axis').basictable({
+		swapAxis: true
+	  });
+
+	  $('#table-force-off').basictable({
+		forceResponsive: true
+	  });
+
+	  $('#table-no-resize').basictable({
+		noResize: true
+	  });
+
+	  $('#table-two-axis').basictable();
+
+	  $('#table-max-height').basictable({
+		tableWrapper: true
+	  });
+	});
+  </script>
+	<script src="__STATIC__/index/js/jquery.min.js"></script>
+	<script src="__STATIC__/index/js/materialize.js"></script>
+	<script src="__STATIC__/index/js/owl.carousel.min.js"></script>
+	<script src="__STATIC__/index/js/main.js"></script>
+</body>
+</html>

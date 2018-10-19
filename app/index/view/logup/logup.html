@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="images/favicon.png">
+	<title>注册</title>
+
+
+{include file='public/head' /}
+</head>
+<body>
+
+	<!-- navbar -->
+	<div class="navbar">
+		<div class="container">
+			<div class="row">
+				<div class="col s6">
+					<div class="content-left">
+						<a href="#slide-out" data-activates="slide-out" class="sidebar"><i class="fa fa-bars"></i></a>
+						<a href="index.html"><h1>晨晓维</h1></a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- end navbar -->
+	
+	<!-- sidebar -->
+	 {include file='public/lan' /}
+	<!-- end sidebar -->
+	
+	<!-- sidebar -->
+
+	<!-- end sidebar -->
+
+	<!-- sidebar cart -->
+	
+	<!-- end sidebar cart -->
+
+	<!-- sign up -->
+	<div class="sign-up segments-page">
+		<div class="container">
+		<div class="signup-contents">
+			<div class="pages-title">
+				<h3>注册</h3>
+			</div>
+			<form method="POST" action="{:url('logup/check')}">
+				<input type="text" placeholder="用户名" name="username">
+				<input type="password" placeholder="密  码" name="password">
+				<input type="email" placeholder="邮箱" name="email">
+				<input type="text" placeholder="手机" name="phone">
+				<input type="text" placeholder="真实姓名" name="name">
+				<button class="button" type="submit"><i class="fa fa-send"></i>注册</button>
+			</form>
+			<br>
+		<a href="{:url('login/index')}"><button class="button"><i class="fa fa-send"></i>登录</button></a>
+		</div>
+		</div>
+	</div>
+	<!-- end sign up -->
+    {include file='public/foot' /}
+	<script src="__STATIC__/index/js/jquery.min.js"></script>
+	<script src="__STATIC__/index/js/materialize.js"></script>
+	<script src="__STATIC__/index/js/owl.carousel.min.js"></script>
+	<script src="__STATIC__/index/js/main.js"></script>
+
+</body>
+</html>

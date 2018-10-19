@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+    <link href="__STATIC__/video/css/WeUI/weui.min.css" rel="stylesheet" />
+    <link href="__STATIC__/video/css/mui/mui.min.css" rel="stylesheet" />
+        {include file='public/head' /}
+    <style>
+        body {
+            font-family: 'Microsoft YaHei';
+        }
+
+        p {
+            font-size: 4.5vw;
+        }
+        .title {
+            margin: 20px 15px 7px;
+            color: #6d6d72;
+            font-size: 15px;
+        }
+        .active{
+            color:#20b40f;
+        }
+        li{
+            font-size:4vw;
+        }
+    </style>
+    <title>视频</title>
+
+</head>
+<body>
+    {include file='public/lan' /}
+
+<br>
+    <video style="width:100%;" src="<?php echo '__STATIC__/' . $path;?>" controls></video>
+
+    
+    <div class="mui-content">
+        <div class="title">
+            <br><span style="font-size: 20px">视频说明：</span><br><br>
+            <span style="font-size: 13px">{$dis}</span><br><br>
+        </div>
+
+    </div>
+    <div class="foot" style="bottom: -50px;"></div>
+       <div class="Footer">{include file='public/foot' /}</div> 
+</body>
+</html>

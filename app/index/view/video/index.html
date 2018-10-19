@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+    <title>i视频</title>
+    <meta name="keywords" content="HTML5,手机微信,移动端,视频教程,课程学习,网站模板" />
+    <meta name="description" content="HTML5手机微信移动端视频教程课程学习网站模板下载。一套微信在线教育视频网站模板，主要包含页面：首页、个人中心、详情页、购买完成页、开通年费会员页、视频播放页、搜索页、提交评论页、我的订单页、我的足迹、搜索页、视频列表页、联系我们等12张静态网页模板。" /> 
+    <meta name="author" content="js代码(www.jsdaima.com)" />
+    <meta name="copyright" content="js代码(www.jsdaima.com)" />
+    <link href="__STATIC__/video/css/WeUI/weui.min.css" rel="stylesheet" />
+    <link href="__STATIC__/video/css/mui/mui.min.css" rel="stylesheet" />
+    {include file='public/head' /}
+    <style>
+        body {
+            font-family: 'Microsoft YaHei';
+        }
+
+        p {
+            font-size: 4.5vw;
+        }
+        h5 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            text-indent: 12px;
+        }
+
+        .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body {
+            font-size: 15px;
+            margin-top: 8px;
+            color: #333;
+        }
+        .mui-bar-nav ~ .mui-content {
+             padding-top: 0; 
+        }
+    </style>
+    <title>首页</title>
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <h1 class="mui-title">视频</h1>
+        
+    </header>
+     {include file='public/lan' /}
+    <div style="text-align: center;">
+<br><h1 ><strong>视频</strong></h1>
+    </div>
+    <div class="mui-content" style="background-color:#fff">
+        <ul class="mui-table-view mui-grid-view">
+            <li class="mui-table-view-cell mui-media mui-col-xs-6">
+                <a href="{:url('video/play',['id' => 0])}",{id:0}">
+                    <img class="mui-media-object" src="__STATIC__/video/images/ps0.png">
+                    <div class="mui-media-body">学子宴播放视频</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-6">
+                <a href="{:url('video/play',['id' => 1])}",{id:1}">
+                    <img class="mui-media-object" src="__STATIC__/video/images/ps1.png">
+                    <div class="mui-media-body">情人节视频</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-6">
+                <a href="{:url('video/play',['id' => 2])}",{id:2}">
+                    <img class="mui-media-object" src="__STATIC__/video/images/ps2.png">
+                    <div class="mui-media-body">第一次制作的视频</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <br />
+    <div class="weui-footer">
+        <p class="weui-footer__text">没有更多了</p>
+    </div>
+         {include file='public/foot' /}
+    <script src="js/mui.min.js"></script>
+    <script>
+        mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+        var slider = mui("#slider");
+        slider.slider({
+            interval: 5000
+        });
+    </script>
+</body>
+</html>

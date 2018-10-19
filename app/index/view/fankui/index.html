@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>意见反馈</title>
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <link href="__STATIC__/fankui/css/style.css" rel="stylesheet" type="text/css"/>
+
+
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="__STATIC__/index/css/materialize.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/loaders.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/line-awesome.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/line-awesome-font-awesome.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/style.css">
+    </head>
+
+{include file='public/lan' /}
+        <section class="aui-flexView">
+            <header class="aui-navBar aui-navBar-fixed">
+
+                <div class="aui-center">
+                    <span class="aui-center-title">意见反馈</span>
+                </div>
+                <a href="javascript:;" class="aui-navBar-item">
+                    <i class="icon icon-sys"></i>
+                </a>
+            </header>
+            <section class="aui-scrollView">
+                <div class="aui-view-box">
+                    <form method="POST" action="{:url('fankui/tijiao')}">
+                    <div class="aui-view-box-item">
+                        <h2>您的问题或建议:</h2>
+
+                        <textarea name="text">输入个人意见反馈,字数在200字以内</textarea>
+                    </div>
+                    <div class="aui-view-box-item">
+                        <h2>您的联系方式:</h2>
+                        <input type="text" placeholder="输入电话号码" name="phone">
+                        <input type="text" placeholder="输入电子邮箱" name="email">
+                    </div>
+                    <div class="aui-view-box-item">
+                        <p>留下您的联系方式,以便我们了解问题后及时反馈结果。</p>
+                    </div>
+                    <div class="aui-btn-submit">
+                        <button type="submit">提交建议</button>
+                    </div>
+                    </form>
+                </div>
+            </section>
+            <footer class="aui-footer aui-footer-fixed">
+
+            </footer>
+        </section>
+            <script src="__STATIC__/index/js/jquery.min.js"></script>
+    <script src="__STATIC__/index/js/materialize.js"></script>
+    <script src="__STATIC__/index/js/owl.carousel.min.js"></script>
+    <script src="__STATIC__/index/js/main.js"></script>
+    </body>
+</html>

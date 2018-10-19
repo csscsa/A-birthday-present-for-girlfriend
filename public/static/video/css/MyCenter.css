@@ -1,0 +1,63 @@
+﻿body {
+    font-family: 'Microsoft YaHei';
+    background: #EDEEF0;
+}
+
+.nickPic {
+    border-radius: 50px;
+}
+
+p {
+    font-size: 3.5vw;
+}
+
+.top_div {
+    width: 100%;
+    position: relative;
+}
+
+.top_img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.btn_img {
+    width: 100%;
+    vertical-align: middle;
+    position: absolute;
+    z-index: 1000;
+}
+
+.userInfo {
+    width: 100%;
+    height: 100%;
+    line-height: 6.8vw;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.uPic {
+    width: 16vw;
+    height: 16vw;
+    border-radius: 50px;
+    margin-top: 4vw;
+}
+
+.uName {
+    font-size: 3.5vw;
+    color: #fff;
+}
+
+.hy {
+    width: 6vw;
+    position: absolute;
+    top: 21.5vw;
+    left: 21.5vw;
+}
+
+.uBalance {
+    font-size: 5.3vw;
+    color: #fff;
+}

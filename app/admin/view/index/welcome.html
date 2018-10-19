@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            X-admin v1.0
+        </title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="__STATIC__/admin/css/x-admin.css" media="all">
+    <script src="__STATIC__/index/js/jquery.min.js"></script>
+    <script src="__STATIC__/index/js/main.js"></script>
+    </head>
+    <body style="background-color: pink">
+
+
+<script>
+    function mytime(){
+        var a = new Date();
+        var b = a.toLocaleTimeString();
+        var c = a.toLocaleDateString();
+        document.getElementById("time1").innerHTML = "当前时间："+c+"&nbsp"+b;
+        var address=window.location.href;
+            thisDLoc   =   document.location;  
+            var hostport=document.location.host;
+            document.getElementById("local").innerHTML = "当前域名是："+hostport;
+        }
+    setInterval(function() {mytime()},1000);
+
+
+
+
+</script>
+
+
+        <div class="x-body" style="background-color: blue">
+            <blockquote class="layui-elem-quote" style="font-size: 20px;text-align: center;background-color: green;color: white">
+                晨晓维后台首页<span class="f-14"></span><br>  <br> 完成时间： 2018年10月19日
+            </blockquote>
+        </div>
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div style="font-size: 22px;text-align: center;">
+
+
+              <span>本站总浏览量<span id="busuanzi_value_site_pv"></span>次</span><br>
+              <p id="local"></p>  
+              <p id="time1"></p>  
+              
+        </div> 
+
+<div>
+
+
+    <?php
+
+$ip = $_SERVER['SERVER_ADDR'];
+
+$a1 =  $_SERVER['SERVER_NAME']; 
+
+$a2 =  $_SERVER['SERVER_PORT'];
+
+$a3 =php_uname('s').php_uname('r');
+
+$cao = php_uname();
+
+$a5 =   PHP_VERSION; 
+
+$a6 =  DEFAULT_INCLUDE_PATH;
+
+$a7 =   __FILE__;
+
+$a8 = $_SERVER["HTTP_HOST"]; 
+
+$qqqq = php_sapi_name();
+
+$qq = $_SERVER['SERVER_SOFTWARE'];
+
+
+
+$host = $_SERVER["HTTP_HOST"];
+
+
+
+$la = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+
+$web = $_SERVER['SERVER_PORT'];
+
+
+    ?>
+            <table class="layui-table" style="background-color: pink;">
+                <thead>
+                    <tr>
+                        <th colspan="2" scope="col" style="font-size: 20px;text-align: center;">服务器信息</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th width="30%">服务器计算机名</th>
+                        <td><span id="lbServerName">{$host}</span></td>
+                    </tr>
+                    <tr>
+                        <td>服务器IP地址</td>
+                        <td>{$ip}</td>
+                    </tr>
+                    <tr>
+                        <td>服务器域名</td>
+                        <td>{$a1}</td>
+                    </tr>
+                    <tr>
+                        <td>服务器端口 </td>
+                        <td>{$a2}</td>
+                    </tr>
+                    <tr>
+                        <td>服务器版本 </td>
+                        <td>{$a3}</td>
+                    </tr>
+                    <tr>
+                        <td>服务器解译引擎 </td>
+                        <td>{$qq}</td>
+                    </tr>
+                    <tr>
+                        <td>服务器操作系统 </td>
+                        <td>{$cao}</td>
+                    </tr>
+                    <tr>
+                        <td>PHP路径 </td>
+                        <td>{$a6}</td>
+                    </tr>
+                   
+                    <tr>
+                        <td>服务器的语言种类 </td>
+                        <td>{$la}</td>
+                    </tr>
+                    <tr>
+                        <td>服务器Web端口 </td>
+                        <td>{$web}</td>
+                    </tr>
+                    <tr>
+                        <td>PHP运行方式</td>
+                        <td>{$qqqq}</td>
+                    </tr>
+                    <tr>
+                        <td>PHP版本 </td>
+                        <td>{$a5}</td>
+                    </tr>
+
+
+                   
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+    </body>
+</html>

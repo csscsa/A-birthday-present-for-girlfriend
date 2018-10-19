@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="images/favicon.png">
+	<title>修改头像</title>
+
+{include file='public/head' /}
+</head>
+<body>
+
+	{include file='public/lan' /}
+	<!-- end sidebar cart -->
+
+	<!-- settings -->
+	<div class="segments-page">
+		<div class="container">
+			<div class="settings">
+				<div class="pages-title">
+					<h3>修改头像</h3>
+				</div>
+				<form method="POST" enctype="multipart/form-data" action="{:url('touxiang/up')}">
+
+					<div class="profile-banner">
+						<span>选择头像</span>
+						<div class="contents">
+							<input type="file" name="file">
+						</div>
+					</div>
+                     上传文件格式为JPG或PNG<br>照片大小不超过20M。<br>
+					<button class="button" type="submit">修改</button>
+					<a href="{:url('index/index')}"><span class="button" >返回</span></a>
+				</form>
+
+			</div>
+		</div>
+	</div>
+	<!-- end settings -->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

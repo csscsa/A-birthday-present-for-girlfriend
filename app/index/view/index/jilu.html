@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+    <link href="__STATIC__/video/css/WeUI/weui.min.css" rel="stylesheet" />
+    <link href="__STATIC__/video/css/mui/mui.min.css" rel="stylesheet" />
+    {include file='public/head' /}
+    <style>
+    <style > body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Microsoft YaHei';
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center;
+        line-height: 20px;
+    }
+
+    .weui-article {
+        padding: 5px 15px;
+    }
+
+    small {
+        color: #1AAC19;
+    }
+
+    h2 {
+        color: #1AAC19;
+    }
+    </style>
+    <title>联系我们</title>
+</head>
+<body>
+
+
+
+<?php
+use think\Session;
+
+
+if(is_null(Session::get('user_id')))
+{
+      $username = '未登录';
+}else{
+
+$username = Session::get('user_id');
+}
+?>
+<div class="sidebar-panel">
+        <ul id="slide-out" class="collapsible side-nav">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="images/blog3.jpg" alt="">
+                    </div>
+                    <img class="circle responsive-img" src="__STATIC__/index/images/profile.png" alt="">
+                    <span class="white-text name">{$username}</span>
+                </div>
+            </li>
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i>主页</a></li>
+
+
+                
+            <li><a href="{:url('photo/index')}"><i class="fa fa-female"></i>相册</a></li>
+            <li><a href="{:url('video/index')}"><i class="fa fa-female"></i>视频</a></li>
+            <li><a href="{:url('liuyan/index')}"><i class="fa fa-file"></i>留言板</a></li>
+            <li><a href="{:url('fankui/index')}"><i class="fa fa-envelope-o"></i>意见反馈</a></li>
+            <li><a href="{:url('fankui/indexa')}"><i class="fa fa-envelope-o"></i>反馈查看</a></li>
+            
+            <li><a href="{:url('admin/index/index')}"><i class="fa fa-envelope-o"></i>管理员后台</a></li>
+            <li><a href="{:url('login/index')}"><i class="fa fa-sign-in"></i>登录</a></li>
+            <li><a href="{:url('logup/index')}"><i class="fa fa-user-plus"></i>注册</a></li>
+            <li><a href="{:url('login/logout')}"><i class="fa fa-share"></i>注销</a></li>
+        </ul>
+    </div>
+    <!-- sidebar -->
+    <div class="sidebar-panel sidebar-search">
+        <ul id="slide-out-right" class="collapsible side-nav">
+            <li>
+                <div class="form">
+                    <input type="search">
+                    <button class="button"><i class="fa fa-search"></i></button>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <h5>Popular Search</h5></li>
+            <li><a href="">Football</a></li>
+            <li><a href="">Lemon</a></li>
+            <li><a href="">Canon</a></li>
+            <li><a href="">Laptop</a></li>
+            <li><a href="">Pizza</a></li>
+            <li><a href="">Sport</a></li>
+        </ul>
+    </div>
+    <!-- end sidebar -->
+
+    <!-- sidebar cart -->
+   
+    <!-- end sidebar cart -->
+
+       <div class="navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col s6">
+                    <div class="content-left">
+                        <a href="#slide-out" data-activates="slide-out" class="sidebar"><i class="fa fa-bars"></i></a>
+                        <a href="{:url('index/index')}"><h1>晨晓维</h1></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+   
+   
+
+
+<br>
+<br>
+
+
+
+    <img src="__STATIC__/video/images/contact1.jpg" />
+    <article class="weui-article">
+        <h1>联&nbsp;系&nbsp;我<br /><small>Contact Me</small></h1>
+
+        <section>
+            <h2 class="title">关于网站</h2>
+            <section>
+                本网站开发仅为个人使用，后端完全自主开发，全部代码均为本人所写，使用thinkphp框架，历时两个多月完成开发。前端样式部分使用开源样式与模板，如果前端样式侵犯了您的个人权益，请联系我！我将尽快更改！该网站部门模块存在缺陷，后台管理未集成全部功能，后续将进一步开发。前台部分页面开发未完，如有bug请及时反馈。开发不易，请不要发表不正确言论。请文明浏览,文明评论。
+                
+            </section>
+
+
+        <section>
+            <h2 class="title">联系方式</h2>
+            <section>
+                <h3>Q&nbsp;Q：&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)">&nbsp;&nbsp;609046248&nbsp;&nbsp;</a></h3>
+                <h3>手机：&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)">13180837712</a></h3>
+            </section>
+            <h2 class="title">地址</h2>
+            <section>
+                <h3 style="text-align: center;">吉林省长春市净月开发区吉林农业大学</h3>
+            </section>
+        </section>
+    </article>
+        {include file='public/foot' /}
+</body>
+</html>

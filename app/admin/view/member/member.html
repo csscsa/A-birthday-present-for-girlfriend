@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            X-admin v1.0
+        </title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="__STATIC__/admin/css/x-admin.css" media="all">
+    </head>
+    <body>
+        <div class="x-nav">
+            <span class="layui-breadcrumb">
+              <a><cite>首页</cite></a>
+              <a><cite>管理员管理</cite></a>
+              <a><cite>管理员列表</cite></a>
+            </span>
+            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"  href="javascript:location.replace(location.href);" title="刷新"><i class="layui-icon" style="line-height:30px">ဂ</i></a>
+        </div>
+        <div class="x-body">
+            
+            
+            <table class="layui-table">
+                <thead>
+                    <tr>
+
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            用户名
+                        </th>
+                        <th>
+                            真实姓名
+                        </th>
+                        <th>
+                            手机
+                        </th>
+                        <th>
+                            邮箱
+                        </th>
+                        <th>
+                            最后登录时间
+                        </th>
+                        <th>
+                            登录次数
+                        </th>
+
+                    </tr>
+                </thead>
+
+<?php
+        use app\admin\model\User;
+        $user = User::name('user') ->select();
+
+        
+         foreach(array_reverse($user) as $users){              
+?>
+
+       
+
+                <tbody>
+                    <tr>
+                        <td>
+                          <?php echo $users['id'];?>
+                        </td>
+                        <td>
+                            <u style="cursor:pointer" onclick="member_show('张三','member-show.html','10001','360','400')">
+                              <?php echo $users['username'];?>
+                            </u>
+                        </td>
+                        <td >
+                            <?php echo $users['name'];?>
+                        </td>
+                        <td >
+                            <?php echo $users['phone'];?>
+                        </td>
+                        <td >
+                            <?php echo $users['email'];?>
+                        </td>
+
+                        <td>
+                            <?php echo $users['last_time'];?>
+                        </td>
+                        <td>
+                            <?php echo $users['login_count'];?>
+                        </td>
+
+                      
+                    </tr>
+                </tbody>
+<?php } ?>
+            </table>
+
+            <div id="page"></div>
+        </div>
+        <script src="__STATIC__/admin/lib/layui/layui.js" charset="utf-8"></script>
+        <script src="__STATIC__/admin/js/x-layui.js" charset="utf-8"></script>
+       
+
+    </body>
+</html>

@@ -1,0 +1,109 @@
+<?php
+use think\Session;
+use app\index\model\Admin;
+
+if(is_null(Session::get('user_id')))
+{
+      $username = '未登录';
+      $aaa = '/index/images/profile.png';
+}else{
+
+$username = Session::get('user_id');
+ $result = Admin::name('user')->where('username',Session::get('user_id'))->find();
+
+ $aaa = $result['touxiang'];
+
+}
+?>
+
+<div class="sidebar-panel">
+        <ul id="slide-out" class="collapsible side-nav">
+
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="__STATIC__/index/images/blog.jpg" alt="">
+                    </div>
+
+                    <img class="circle responsive-img" src="<?php echo '__STATIC__/' . $aaa;?>" alt="" onclick='window.open("{:url('touxiang/index')}")'>
+                    <span class="white-text name">{$username}</span>
+                </div>
+            </li>
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i>主页</a></li>
+
+
+                
+            <li><a href="{:url('photo/index')}"><i class="fa fa-female"></i>相册</a></li>
+            <li><a href="{:url('video/index')}"><i class="fa fa-female"></i>视频</a></li>
+            <li><a href="{:url('liuyan/index')}"><i class="fa fa-file"></i>留言板</a></li>
+            <li><a href="{:url('fankui/index')}"><i class="fa fa-envelope-o"></i>意见反馈</a></li>
+            <li><a href="{:url('fankui/indexa')}"><i class="fa fa-envelope-o"></i>反馈查看</a></li>  
+            <li><a href="{:url('admin/index/index')}"><i class="fa fa-envelope-o"></i>管理员后台</a></li>
+            <li><a href="{:url('login/index')}"><i class="fa fa-sign-in"></i>登录</a></li>
+            <li><a href="{:url('logup/index')}"><i class="fa fa-user-plus"></i>注册</a></li>
+            <li><a href="{:url('login/logout')}"><i class="fa fa-share"></i>注销</a></li>
+            <li><a href="{:url('index/jilu')}"><i class="fa fa-user-plus"></i>关于</a></li>
+        </ul>
+    </div>
+    <!-- sidebar -->
+
+    <!-- end sidebar -->
+
+    <!-- sidebar cart -->
+   
+    <!-- end sidebar cart -->
+
+       <div class="navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col s6">
+                    <div class="content-left">
+                        <a href="#slide-out" data-activates="slide-out" class="sidebar"><i class="fa fa-bars"></i></a>
+                        <a href="{:url('index/index')}"><h1>晨晓维</h1></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+   
+    
+    
+   <div class="container">
+        <div class="slide">
+            <div class="slide-show owl-carousel owl-theme">
+                <div class="slide-content first-slide">
+                    <div class="mask2"></div>
+                    <img src="__STATIC__/index/images/slider1.jpg" alt="">
+                    <div class="caption">
+                        <h2>生日快乐</h2>
+                        <!-- <p>Mobile Template</p> -->
+                        <button class="button">19 years old</button>
+                    </div>
+                </div>
+                <div class="slide-content second-slide">
+                    <div class="mask2"></div>
+                    <img src="__STATIC__/index/images/slider3.jpg" alt="">
+                    <div class="caption">
+                        <h2>在一起</h2>
+<!--                         <p>Mobile Template</p> -->
+<!--                         <button class="button"></button> -->
+                    </div>
+                </div>
+                <div class="slide-content third-slide">
+                    <div class="mask2"></div>
+                    <img src="__STATIC__/index/images/slider2.jpg" alt="">
+                    <div class="caption">
+                        <h2>不离弃</h2>
+<!--                         <p>Mobile Template</p>
+                        <button class="button"></button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script src="__STATIC__/index/js/jquery.min.js"></script>
+    <script src="__STATIC__/index/js/materialize.js"></script>
+    <script src="__STATIC__/index/js/owl.carousel.min.js"></script>
+    <script src="__STATIC__/index/js/main.js"></script>
+
